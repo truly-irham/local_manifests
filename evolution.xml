@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Device trees -->
+  <project name="truly-irham/android_device_xiaomi_zeus" path="device/xiaomi/zeus" remote="github" revision="14.0" />
+  <project name="truly-irham/android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="github" revision="14.0" />
+  
+  <!-- Vendor -->
+  <project name="zeus-junk-yard/android_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="gitlab" revision="14" />
+  <project name="zeus-junk-yard/android_vendor_xiaomi_zeus" path="vendor/xiaomi/zeus" remote="gitlab" revision="14" />
+
+  <!-- kernel -->
+  <project name="zeus-sm8450/android_kernel_xiaomi_sm8450" path="kernel/xiaomi/sm8450" remote="github" revision="lineage-20" />
+  <project name="zeus-sm8450/android_kernel_xiaomi_sm8450-modules" path="kernel/xiaomi/sm8450-modules" remote="github" revision="lineage-20" />
+  <project name="crdroidandroid/android_kernel_xiaomi_sm8450-devicetrees" path="kernel/xiaomi/sm8450-devicetrees" remote="github" revision="14.0" />
+
+  <!-- Miui Camera -->
+  <project name="zeus-junk-yard/android_vendor_xiaomi_miuicamera-zeus" path="vendor/xiaomi/miuicamera-zeus" remote="gitlab" revision="13" />
+  <project name="truly-irham/android_device_xiaomi_miuicamera-zeus" path="device/xiaomi/miuicamera-zeus" remote="github" revision="14.0" />
+</manifest>

@@ -1,11 +1,11 @@
 ![Evolution X](https://github.com/truly-irham/local_manifests/raw/14.0/EvoBanner.png)
 
-Evolution X dependencies for Xiaomi 12 Pro "zeus"
-=================================================
+Evolution X
+===========
 
 [![Download Evolution X](https://img.shields.io/sourceforge/dt/evolution-x.svg)](https://sourceforge.net/projects/evolution-x/files/latest/download)
 
-### Syncing zeus dependencies for Evolution X udc-j ###
+### Syncing Xiaomi 12 Pro "zeus" dependencies for Evolution X udc-j ###
 
 Please add this manifest to .repo/local_manifests before syncing (initialize build directory to udc-j branch first):
 
