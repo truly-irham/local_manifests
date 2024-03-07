@@ -12,7 +12,7 @@ Please add this manifest to .repo/local_manifests before syncing (initialize bui
 ```bash
 # Execute this command inside your build directory
 
-git clone https://github.com/truly-irham/local_manifests.git -b 14.0 .repo/local_manifests
+git clone https://github.com/truly-irham/local_manifests.git -b udc .repo/local_manifests
 ```
 
 ### Syncing Evolution X Source Code ###
