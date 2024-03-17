@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <!-- Remotes -->
+  <remote fetch="https://git.mainlining.org" name="mainlining" revision="lineage-21" />
+
   <!-- Device trees -->
   <project name="truly-irham/android_device_xiaomi_zeus" path="device/xiaomi/zeus" remote="github" revision="udc" />
   <project name="truly-irham/android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="github" revision="udc" />
@@ -11,6 +14,10 @@
 
   <!-- Miui Camera -->
   <project name="truly-irham/android_device_xiaomi_miuicamera-zeus" path="device/xiaomi/miuicamera-zeus" remote="github" revision="udc" />
+
+  <!-- Proprietary Vendor trees -->
+  <project name="cupid-development/proprietary_vendor_xiaomi_zeus" path="vendor/xiaomi/zeus" remote="mainlining" revision="lineage-21" />
+  <project name="cupid-development/proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="mainlining" revision="lineage-21" />
 
   <!-- Import from LineageOS -->
   <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="lineage-21" />
