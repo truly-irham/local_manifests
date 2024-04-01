@@ -7,13 +7,13 @@ Evolution X
 
 ### Syncing Evolution X Source Code ###
 
-To initialize the udc-j manifest branch of Evolution X (this branch is chosen to improve support for MIUI Camera):
+To initialize the uqpr2 manifest branch of Evolution X:
 
 ```bash
-repo init -u https://github.com/Evolution-X/manifest -b udc-j
+repo init -u https://github.com/Evolution-X/manifest -b uqpr2
 ```
 
-### Syncing Xiaomi 12 Pro "zeus" dependencies for Evolution X udc-j ###
+### Syncing Xiaomi 12 Pro "zeus" dependencies for Evolution X uqpr2 ###
 
 Please add this manifest to .repo/local_manifests before syncing:
 
