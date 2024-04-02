@@ -27,13 +27,6 @@ changes=(
 )
 repopick -g 'https://review.lineageos.org' -P hardware/xiaomi ${changes[@]}&
 
-# frameworks/base
-changes=(
-386158 # Add 5G Ultra Wideband icon carrier config keys
-386159 # Fix default values for 5G Ultra Wideband icon carrier config keys
-)
-repopick -g 'https://review.lineageos.org' -P frameworks/base ${changes[@]}&
-
 wait
 
 # hardware/qcom-caf/sm8450/display
