@@ -39,4 +39,17 @@ cd kernel/xiaomi/sm8450
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
 git add --all
 git commit -m "Build kernel with KernelSU from main branch"
+
+## Kernel changes needed to fix fod bugs
+# Revert "input: touchscreen: fts_spi: Change enable_touch_raw argument to int"
+git revert bed962031b69bb2631bf04009f0079ecc4ed29b6
+# Revert "input: touchscreen: xiaomi: Get rid of notify buf spam"
+git revert c0661c5fcde39971988261c218965d13116a95f9
+# Revert "[WIP] input: touchscreen: xiaomi: Reverse from stock module"
+git revert ece512e186d65f0522483871ee9e4b1e4e45507a
+# Reapply "input: touchscreen: xiaomi: Implement touch_thp_film"
+git revert 93250170f8ad3a29ac62a1a0f83649af4b8dcd00
+# Revert "input: touchsreen: xiaomi: Import updated header from M11"
+git revert 2ecbc6be1670837b29cb7b12717e3a7e00415f99
+
 cd ../../..
