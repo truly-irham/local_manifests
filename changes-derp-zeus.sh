@@ -2,9 +2,22 @@
 set -e
 
 source "build/envsetup.sh";
-source "vendor/evolution/build/envsetup.sh";
+source "vendor/derp/build/envsetup.sh";
 
 # Reference/Source: https://xdaforums.com/t/development-of-lineageos-and-oss-kernel-for-xiaomi-sm-gen-4-5-10-devices.4589247/
+
+# frameworks/base
+changes=(
+386158 # Add 5G Ultra Wideband icon carrier config keys
+386159 # Fix default values for 5G Ultra Wideband icon carrier config keys
+)
+repopick -g 'https://review.lineageos.org' -P frameworks/base ${changes[@]}&
+
+# vendor/derp
+changes=(
+367044 # android: merge_dtbs: Respect miboard-id while merging
+)
+repopick -g 'https://review.lineageos.org' -P vendor/derp ${changes[@]}&
 
 # device/qcom/sepolicy_vndr/sm8450
 changes=(
@@ -53,3 +66,14 @@ git revert 93250170f8ad3a29ac62a1a0f83649af4b8dcd00
 git revert 2ecbc6be1670837b29cb7b12717e3a7e00415f99
 
 cd ../../..
+
+# Revert "[Wi-Fi] Remove 'Do not validate' option in CA certificate spinner"
+cd packages/apps/Settings
+git remote show evox >/dev/null 2>&1 && echo "Remote 'evox' already exists." || git remote add evox https://github.com/Evolution-X/packages_apps_Settings.git
+git fetch evox
+git cherry-pick 506fbaa
+git rm res/values/evolution_strings.xml
+git cherry-pick --continue
+cd ../../..
+
+
