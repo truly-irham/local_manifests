@@ -26,4 +26,7 @@
 
   <!-- Import ViPER4Android FX RE -->
   <project name="truly-irham/packages_apps_ViPER4AndroidFX" path="packages/apps/ViPER4AndroidFX" remote="github" revision="v4a" />
+
+  <!-- Import Basic Call Recorder -->
+  <project name="truly-irham/vendor_bcr" path="vendor/bcr" remote="github" revision="main" />
 </manifest>
