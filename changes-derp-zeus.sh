@@ -68,12 +68,16 @@ git revert 2ecbc6be1670837b29cb7b12717e3a7e00415f99
 cd ../../..
 
 # Revert "[Wi-Fi] Remove 'Do not validate' option in CA certificate spinner"
-cd packages/apps/Settings
-git remote show evox >/dev/null 2>&1 && echo "Remote 'evox' already exists." || git remote add evox https://github.com/Evolution-X/packages_apps_Settings.git
-git fetch evox
-git cherry-pick 506fbaa
-git rm res/values/evolution_strings.xml
-git cherry-pick --continue
+cd packages/modules/Wifi
+git remote show matrixx >/dev/null 2>&1 && echo "Remote 'matrixx' already exists." || git remote add matrixx https://github.com/ProjectMatrixx/android_packages_modules_Wifi.git
+git fetch matrixx
+git cherry-pick 833cd86
 cd ../../..
 
-
+cd packages/apps/Settings
+git remote show matrixx >/dev/null 2>&1 && echo "Remote 'matrixx' already exists." || git remote add matrixx https://github.com/ProjectMatrixx/android_packages_apps_Settings.git
+git fetch matrixx 
+git cherry-pick 1204b94
+git rm res/values/cr_strings.xml
+git cherry-pick --continue
+cd ../../..
