@@ -4,8 +4,8 @@
   <remote fetch="https://git.mainlining.org" name="mainlining" revision="lineage-21" />
 
   <!-- Device trees -->
-  <project name="truly-irham/android_device_xiaomi_zeus" path="device/xiaomi/zeus" remote="github" revision="rising-14" />
-  <project name="truly-irham/android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="github" revision="rising-14" />
+  <project name="truly-irham/android_device_xiaomi_zeus" path="device/xiaomi/zeus" remote="github" revision="matrixx-14" />
+  <project name="truly-irham/android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="github" revision="matrixx-14" />
   
   <!-- Kernel trees -->
   <project name="cupid-development/android_kernel_xiaomi_sm8450" path="kernel/xiaomi/sm8450" remote="github" revision="lineage-21" />
@@ -13,7 +13,7 @@
   <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="kernel/xiaomi/sm8450-devicetrees" remote="github" revision="lineage-21" />
 
   <!-- Miui Camera -->
-  <project name="truly-irham/android_device_xiaomi_miuicamera-zeus" path="device/xiaomi/miuicamera-zeus" remote="github" revision="udc" />
+  <project name="truly-irham/android_device_xiaomi_miuicamera-zeus" path="device/xiaomi/miuicamera-zeus" remote="github" revision="lineage-21" />
 
   <!-- Proprietary Vendor trees -->
   <project name="cupid-development/proprietary_vendor_xiaomi_zeus" path="vendor/xiaomi/zeus" remote="mainlining" revision="lineage-21" />
@@ -26,5 +26,5 @@
   <project name="truly-irham/packages_apps_ViPER4AndroidFX" path="packages/apps/ViPER4AndroidFX" remote="github" revision="v4a" />
 
   <!-- Import Basic Call Recorder -->
-  <project name="truly-irham/vendor_bcr" path="vendor/bcr" remote="github" revision="derp-14" />
+  <project name="truly-irham/vendor_bcr" path="vendor/bcr" remote="github" revision="lineage-21" />
 </manifest>
