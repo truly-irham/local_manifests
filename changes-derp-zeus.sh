@@ -47,8 +47,11 @@ cd hardware/qcom-caf/sm8450/display
 git pull https://github.com/LineageOS/android_hardware_qcom_display refs/changes/99/384299/1
 cd ../../../../
 
-# Build kernel with KernelSU from main branch
+# [TEMPORARY] Checkout before merge commits that causes battery drain
 cd kernel/xiaomi/sm8450
+git checkout 35af827935f69a8b0e63ac1c1e7ce7b5028f0d83
+
+# Build kernel with KernelSU from main branch
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
 git add --all
 git commit -m "Build kernel with KernelSU from main branch"
