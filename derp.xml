@@ -18,6 +18,7 @@
   <!-- Proprietary Vendor trees -->
   <project name="cupid-development/proprietary_vendor_xiaomi_zeus" path="vendor/xiaomi/zeus" remote="mainlining" revision="lineage-21" />
   <project name="cupid-development/proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="mainlining" revision="lineage-21" />
+  <project name="anush02198/android_vendor_xiaomi_miuicamera-zeus" path="vendor/xiaomi/miuicamera-zeus" remote="mainlining" revision="14-new" />
 
   <!-- Import from LineageOS -->
   <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="lineage-21" />
