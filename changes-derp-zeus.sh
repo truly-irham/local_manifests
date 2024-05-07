@@ -6,13 +6,6 @@ source "vendor/derp/build/envsetup.sh";
 
 # Reference/Source: https://xdaforums.com/t/development-of-lineageos-and-oss-kernel-for-xiaomi-sm-gen-4-5-10-devices.4589247/
 
-# frameworks/base
-changes=(
-386158 # Add 5G Ultra Wideband icon carrier config keys
-386159 # Fix default values for 5G Ultra Wideband icon carrier config keys
-)
-repopick -g 'https://review.lineageos.org' -P frameworks/base ${changes[@]}&
-
 # vendor/derp
 changes=(
 367044 # android: merge_dtbs: Respect miboard-id while merging
