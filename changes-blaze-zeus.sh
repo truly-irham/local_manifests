@@ -2,21 +2,9 @@
 set -e
 
 source "build/envsetup.sh";
-source "vendor/derp/build/envsetup.sh";
+source "vendor/blaze/build/envsetup.sh";
 
 # Reference/Source: https://xdaforums.com/t/development-of-lineageos-and-oss-kernel-for-xiaomi-sm-gen-4-5-10-devices.4589247/
-
-# vendor/derp
-changes=(
-367044 # android: merge_dtbs: Respect miboard-id while merging
-)
-repopick -g 'https://review.lineageos.org' -P vendor/derp ${changes[@]}&
-
-# device/qcom/sepolicy_vndr/sm8450
-changes=(
-383884 # sepolicy_vndr: update sepolicy for health HAL service
-)
-repopick -g 'https://review.lineageos.org' -P device/qcom/sepolicy_vndr/sm8450 ${changes[@]}&
 
 # hardware/xiaomi
 changes=(
