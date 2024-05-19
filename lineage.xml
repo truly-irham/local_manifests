@@ -2,6 +2,7 @@
 <manifest>
   <!-- Remotes -->
   <remote fetch="https://git.mainlining.org" name="mainlining" revision="lineage-21" />
+  <remote fetch="https://gitlab.com" name="gitlab" />
 
   <!-- Device trees -->
   <project name="truly-irham/android_device_xiaomi_zeus" path="device/xiaomi/zeus" remote="github" revision="lineage-21" />
@@ -22,6 +23,9 @@
 
   <!-- Xiaomi common hardware -->
   <project path="hardware/xiaomi" remote="github" name="LineageOS/android_hardware_xiaomi" revision="lineage-21" />
+
+  <!-- MindTheGapps -->
+  <project path="vendor/gapps" remote="gitlab" name="MindTheGapps/vendor_gapps" revision="upsilon" />
 
   <!-- Import Basic Call Recorder -->
   <project name="truly-irham/vendor_bcr" path="vendor/bcr" remote="github" revision="lineage-21" />
