@@ -34,11 +34,6 @@ repopick -P vendor/lineage ${changes[@]}&
 
 wait
 
-cd hardware/qcom-caf/sm8450/display
-git pull https://github.com/LineageOS/android_hardware_qcom_display refs/changes/99/384299/1
-cd ../../../../
-
-
 ## Kernel changes needed to fix fod bugs
 cd kernel/xiaomi/sm8450
 
