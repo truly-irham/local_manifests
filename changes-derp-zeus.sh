@@ -35,11 +35,6 @@ repopick -g 'https://review.lineageos.org' -P hardware/xiaomi ${changes[@]}&
 
 wait
 
-# hardware/qcom-caf/sm8450/display
-cd hardware/qcom-caf/sm8450/display
-git pull https://github.com/LineageOS/android_hardware_qcom_display refs/changes/99/384299/1
-cd ../../../../
-
 # Build kernel with KernelSU from main branch
 cd kernel/xiaomi/sm8450
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
