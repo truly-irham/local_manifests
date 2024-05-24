@@ -13,9 +13,14 @@ changes=(
 352661 # sensors: Make sensor set mode operation function virtual
 352662 # sensors: Move one shot sensor out of main class
 352663 # sensors: Fix locking around setOperationMode and activate
-352664 # sensors: Add udfps long press sensor
+352664 # sensors: Create sysfs polling one shot sensor
+392967 # sensors: Let the reading of poll fd be configurable
+392968 # sensors: Add SysfsPollingOneShotSensor constructor without enable path
+392969 # sensors: Add udfps long press sensor using SysfsPollingOneShotSensor
 352665 # sensors: Handle fod_pressed_state without coordinates
 363160 # hidl: biometrics: fingerprint: Add enroll methods to udfps handler
+392965 # vibrator: effect: Create double click effect from click if necessary
+392966 # vibrator: effect: Fallback to click if an effect is missing
 )
 repopick -P hardware/xiaomi ${changes[@]}&
 
@@ -31,6 +36,12 @@ changes=(
 367044 # android: merge_dtbs: Respect miboard-id while merging
 )
 repopick -P vendor/lineage ${changes[@]}&
+
+# vendor/qcom/opensource/vibrator
+changes=(
+392952 # vibrator: Use a better check for primitive effects
+)
+repopick -P vendor/qcom/opensource/vibrator ${changes[@]}&
 
 wait
 
