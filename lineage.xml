@@ -22,7 +22,7 @@
   <project name="cupid-development/proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="mainlining" revision="lineage-21" />
 
   <!-- Xiaomi common hardware -->
-  <project path="hardware/xiaomi" remote="github" name="LineageOS/android_hardware_xiaomi" revision="lineage-21" />
+  <project path="hardware/xiaomi" remote="github" name="Zeus-Junk-Yard/android_hardware_xiaomi" revision="14" />
 
   <!-- MindTheGapps -->
   <project path="vendor/gapps" remote="gitlab" name="MindTheGapps/vendor_gapps" revision="upsilon" />
