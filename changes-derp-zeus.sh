@@ -6,12 +6,6 @@ source "vendor/derp/build/envsetup.sh";
 
 # Reference/Source: https://xdaforums.com/t/development-of-lineageos-and-oss-kernel-for-xiaomi-sm-gen-4-5-10-devices.4589247/
 
-# device/qcom/sepolicy_vndr/sm8450
-changes=(
-383884 # sepolicy_vndr: update sepolicy for health HAL service
-)
-repopick -f -g 'https://review.lineageos.org' -P device/qcom/sepolicy_vndr/sm8450 ${changes[@]}&
-
 # hardware/xiaomi
 changes=(
 352657 # Add dummy sensors sub HAL
@@ -31,12 +25,6 @@ changes=(
 392966 # vibrator: effect: Fallback to click if an effect is missing
 )
 repopick -f -g 'https://review.lineageos.org' -P hardware/xiaomi ${changes[@]}&
-
-# vendor/qcom/opensource/vibrator
-changes=(
-392952 # vibrator: Use a better check for primitive effects
-)
-repopick -f -g 'https://review.lineageos.org' -P vendor/qcom/opensource/vibrator ${changes[@]}&
 
 wait
 
