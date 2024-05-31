@@ -22,26 +22,26 @@ changes=(
 392965 # vibrator: effect: Create double click effect from click if necessary
 392966 # vibrator: effect: Fallback to click if an effect is missing
 )
-repopick -P hardware/xiaomi ${changes[@]}&
+repopick -f -P hardware/xiaomi ${changes[@]}&
 
 # frameworks/base
 changes=(
 386158 # Add 5G Ultra Wideband icon carrier config keys
 386159 # Fix default values for 5G Ultra Wideband icon carrier config keys
 )
-repopick -P frameworks/base ${changes[@]}&
+repopick -f -P frameworks/base ${changes[@]}&
 
 # vendor/lineage
 changes=(
 367044 # android: merge_dtbs: Respect miboard-id while merging
 )
-repopick -P vendor/lineage ${changes[@]}&
+repopick -f -P vendor/lineage ${changes[@]}&
 
 # vendor/qcom/opensource/vibrator
 changes=(
 392952 # vibrator: Use a better check for primitive effects
 )
-repopick -P vendor/qcom/opensource/vibrator ${changes[@]}&
+repopick -f -P vendor/qcom/opensource/vibrator ${changes[@]}&
 
 wait
 
