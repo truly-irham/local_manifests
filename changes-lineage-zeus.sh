@@ -19,9 +19,13 @@ repopick -f -P vendor/lineage ${changes[@]}&
 
 wait
 
-## Kernel changes needed to fix fod bugs
+# Build kernel with KernelSU from main branch
 cd kernel/xiaomi/sm8450
+curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
+git add --all
+git commit -m "Build kernel with KernelSU from main branch"
 
+## Kernel changes needed to fix fod bugs
 # Revert "input: touchscreen: fts_spi: Change enable_touch_raw argument to int"
 git revert d21b9ed388ecb92507b6f419c154f1a986e857a0 
 # Revert "input: touchscreen: xiaomi: Get rid of notify buf spam"
