@@ -10,7 +10,7 @@ source "vendor/derp/build/envsetup.sh";
 changes=(
 383884 # sepolicy_vndr: update sepolicy for health HAL service
 )
-repopick -g 'https://review.lineageos.org' -P device/qcom/sepolicy_vndr/sm8450 ${changes[@]}&
+repopick -f -g 'https://review.lineageos.org' -P device/qcom/sepolicy_vndr/sm8450 ${changes[@]}&
 
 # hardware/xiaomi
 changes=(
@@ -30,13 +30,13 @@ changes=(
 392965 # vibrator: effect: Create double click effect from click if necessary
 392966 # vibrator: effect: Fallback to click if an effect is missing
 )
-repopick -g 'https://review.lineageos.org' -P hardware/xiaomi ${changes[@]}&
+repopick -f -g 'https://review.lineageos.org' -P hardware/xiaomi ${changes[@]}&
 
 # vendor/qcom/opensource/vibrator
 changes=(
 392952 # vibrator: Use a better check for primitive effects
 )
-repopick -g 'https://review.lineageos.org' -P vendor/qcom/opensource/vibrator ${changes[@]}&
+repopick -f -g 'https://review.lineageos.org' -P vendor/qcom/opensource/vibrator ${changes[@]}&
 
 wait
 
