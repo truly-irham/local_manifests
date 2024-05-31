@@ -37,12 +37,6 @@ changes=(
 )
 repopick -f -P vendor/lineage ${changes[@]}&
 
-# vendor/qcom/opensource/vibrator
-changes=(
-392952 # vibrator: Use a better check for primitive effects
-)
-repopick -f -P vendor/qcom/opensource/vibrator ${changes[@]}&
-
 wait
 
 ## Kernel changes needed to fix fod bugs
