@@ -20,8 +20,10 @@
   <project name="cupid-development/proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="mainlining" revision="lineage-21" />
   <project name="anush02198/android_vendor_xiaomi_miuicamera-zeus" path="vendor/xiaomi/miuicamera-zeus" remote="mainlining" revision="14-new" />
 
+  <!-- Xiaomi common hardware -->
+  <project name="Zeus-Junk-Yard/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="14" />
+
   <!-- Import from LineageOS -->
-  <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="lineage-21" />
   <project name="LineageOS/android_hardware_qcom_display" path="hardware/qcom-caf/sm8450/display" remote="github" revision="lineage-21.0-caf-sm8450" />
   <project name="LineageOS/android_vendor_qcom_opensource_agm" path="hardware/qcom-caf/sm8450/audio/agm" remote="github" revision="lineage-21.0-caf-sm8450" />
 

@@ -4,30 +4,6 @@ set -e
 source "build/envsetup.sh";
 source "vendor/derp/build/envsetup.sh";
 
-# Reference/Source: https://xdaforums.com/t/development-of-lineageos-and-oss-kernel-for-xiaomi-sm-gen-4-5-10-devices.4589247/
-
-# hardware/xiaomi
-changes=(
-352657 # Add dummy sensors sub HAL
-352658 # sensors: Make sensor batch function virtual
-352659 # sensors: Make sensor run function virtual
-352660 # sensors: Make sensor flush function virtual
-352661 # sensors: Make sensor set mode operation function virtual
-352662 # sensors: Move one shot sensor out of main class
-352663 # sensors: Fix locking around setOperationMode and activate
-352664 # sensors: Create sysfs polling one shot sensor
-392967 # sensors: Let the reading of poll fd be configurable
-392968 # sensors: Add SysfsPollingOneShotSensor constructor without enable path
-392969 # sensors: Add udfps long press sensor using SysfsPollingOneShotSensor
-352665 # sensors: Handle fod_pressed_state without coordinates
-363160 # hidl: biometrics: fingerprint: Add enroll methods to udfps handler
-392965 # vibrator: effect: Create double click effect from click if necessary
-392966 # vibrator: effect: Fallback to click if an effect is missing
-)
-repopick -f -g 'https://review.lineageos.org' -P hardware/xiaomi ${changes[@]}&
-
-wait
-
 # Build kernel with KernelSU from main branch
 cd kernel/xiaomi/sm8450
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
