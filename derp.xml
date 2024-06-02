@@ -23,10 +23,6 @@
   <!-- Xiaomi common hardware -->
   <project name="Zeus-Junk-Yard/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="14" />
 
-  <!-- Import from LineageOS -->
-  <project name="LineageOS/android_hardware_qcom_display" path="hardware/qcom-caf/sm8450/display" remote="github" revision="lineage-21.0-caf-sm8450" />
-  <project name="LineageOS/android_vendor_qcom_opensource_agm" path="hardware/qcom-caf/sm8450/audio/agm" remote="github" revision="lineage-21.0-caf-sm8450" />
-
   <!-- Import Basic Call Recorder -->
   <project name="truly-irham/vendor_bcr" path="vendor/bcr" remote="github" revision="lineage-21" />
 </manifest>
