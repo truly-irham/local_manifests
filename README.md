@@ -4,7 +4,7 @@ DerpFest
 ---------------
 
 
-Let's build DerpFest for Xiaomi 12 Pro (zeus)!
+Let's build DerpFest for Xiaomi 12 Pro (dagda/zeus)!
 ---------------
 
 To get started with Android, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
@@ -15,7 +15,7 @@ To set up your build environment and sync DerpFest, please follow this guide: [L
 ```bash
 repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14
 ```
-**Let's sync zeus specific trees:**
+**Let's sync dagda/zeus specific trees:**
 ```bash
 git clone https://github.com/truly-irham/local_manifests.git -b derp-14 .repo/local_manifests
 ```
@@ -25,12 +25,12 @@ _Note: You must delete related lines in DerpFest manifest folder to avoid duplic
 ```bash
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 ```
-**Apply required changes for zeus before building:**
+**Apply required changes for dagda/zeus before building:**
 
 _Note: You may want to review those changes first before applying_
 ```bash
-cp .repo/local_manifests/changes-derp-zeus.sh ./
-./changes-derp-zeus.sh
+cp .repo/local_manifests/changes-derp-dagda.sh ./
+./changes-derp-dagda.sh
 ```
 _Note: If the cherry-pick command failed due to conflict, you may want to resolve the conflict manually_
 
@@ -45,14 +45,14 @@ The source at DerpFest is well configured for building.
 ```
 **Prepare your device with:**
 ```bash
-lunch derp_zeus-userdebug
+lunch derp_dagda-userdebug
 ```
 **Then fire it off with:**
 ```bash
 mka derp
 ```
 
-Thanks section (zeus source)
+Thanks section (dagda/zeus source)
 ---------------
 
 All thanks to @ArianK16a and @Adrianyyyy and all involved (directly or indirectly) devs to make this build possible :D FYI the device, kernel and vendor trees used in this build are all based on their great trees!
