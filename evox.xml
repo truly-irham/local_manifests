@@ -5,8 +5,8 @@
   <remote fetch="https://gitlab.com" name="gitlab" />
 
   <!-- Device trees -->
-  <project name="truly-irham/android_device_xiaomi_dagda" path="device/xiaomi/dagda" remote="github" revision="lineage-21" />
-  <project name="truly-irham/android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="github" revision="lineage-21" />
+  <project name="truly-irham/android_device_xiaomi_dagda" path="device/xiaomi/dagda" remote="github" revision="udc" />
+  <project name="truly-irham/android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="github" revision="udc" />
   
   <!-- Kernel trees -->
   <project name="cupid-development/android_kernel_xiaomi_sm8450" path="kernel/xiaomi/sm8450" remote="github" revision="lineage-21" />
@@ -23,10 +23,4 @@
 
   <!-- Xiaomi common hardware -->
   <project path="hardware/xiaomi" remote="github" name="LineageOS/android_hardware_xiaomi" revision="lineage-21" />
-
-  <!-- MindTheGapps -->
-  <project path="vendor/gapps" remote="gitlab" name="MindTheGapps/vendor_gapps" revision="upsilon" />
-
-  <!-- Import Basic Call Recorder -->
-  <project name="truly-irham/vendor_bcr" path="vendor/bcr" remote="github" revision="lineage-21" />
 </manifest>

@@ -6,19 +6,6 @@ source "vendor/lineage/build/envsetup.sh";
 
 # Source: https://gist.github.com/Gelbpunkt/699551aebc5ae12c821ad2ea18b21409
 
-# frameworks/base
-changes=(
-386158 # Add 5G Ultra Wideband icon carrier config keys
-386159 # Fix default values for 5G Ultra Wideband icon carrier config keys
-)
-repopick -g 'https://review.lineageos.org' -f -P frameworks/base ${changes[@]}&
-
-# vendor/lineage
-changes=(
-367044 # android: merge_dtbs: Respect miboard-id while merging
-)
-repopick -g 'https://review.lineageos.org' -f -P vendor/lineage ${changes[@]}&
-
 # hardware/xiaomi
 changes=(
 352657 # Add dummy sensors sub HAL

@@ -1,36 +1,56 @@
-LineageOS
-===========
+![Evolution X](https://github.com/Evolution-XYZ/manifest/raw/udc/Banner.png)
 
-Getting started
+Let's build Evolution X for Xiaomi 12 Pro (dagda/zeus)!
 ---------------
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+## Pre-requisites and setting up build environment
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+LineageOS wiki covers everything necessary for setting up build environment. Please refer to [this wiki](https://lineage-wiki.mainlining.org/devices/zeus/build/) until you have successfully set up your build environment.
+
+## Initialize local repository
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+repo init -u https://github.com/Evolution-XYZ/manifest -b udc --git-lfs
 ```
-Then to sync up:
+
+## Let's sync dagda/zeus specific trees!
+```bash
+git clone https://github.com/truly-irham/local_manifests.git -b udc .repo/local_manifests
 ```
-repo sync
+
+## Sync up
 ```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
 
+## Apply required changes for dagda/zeus before building:
 
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
+_Note: You may want to review those changes first before applying_
+```bash
+cp .repo/local_manifests/changes-evox-dagda.sh ./
+./changes-evox-dagda.sh
+```
+_Note: If the cherry-pick command failed due to conflict, you may want to resolve the conflict manually_
 
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
+## Build
 
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
+- Set up the build environment
+```bash
+. build/envsetup.sh
+```
 
+- Lunch a target
+```bash
+lunch lineage_dagda-userdebug
+```
 
-Buildbot
---------
+- To start compiling
+```bash
+m evolution
+```
 
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
+Thanks section (dagda/zeus source)
+---------------
 
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
+All thanks to @ArianK16a and @Adrianyyyy and all involved (directly or indirectly) devs to make this build possible :D FYI the device, kernel and vendor trees used in this build are all based on their great trees!
 
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+Feel free to follow their trees development in this [cupid-development repo.](https://github.com/cupid-development)
