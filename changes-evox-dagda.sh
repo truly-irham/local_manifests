@@ -33,3 +33,10 @@ curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh
 git add --all
 git commit -m "Build kernel with KernelSU from main branch"
 cd ../../..
+
+# Add OTA support for Unofficial builds
+cd vendor/lineage
+git remote | grep -q "^temp-repo$" || git remote add temp-repo https://github.com/truly-irham/vendor_evolution.git
+git fetch temp-repo
+git cherry-pick 6f338330
+cd ../..
