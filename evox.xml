@@ -15,7 +15,7 @@
 
   <!-- Miui Camera -->
   <project name="truly-irham/android_device_xiaomi_miuicamera-zeus" path="device/xiaomi/miuicamera-zeus" remote="github" revision="lineage-21" />
-  <project name="anush02198/android_vendor_xiaomi_miuicamera-zeus" path="vendor/xiaomi/miuicamera-zeus" remote="mainlining" revision="14-new" />
+  <project name="anush02198/android_vendor_xiaomi_miuicamera-dagda" path="vendor/xiaomi/miuicamera-zeus" remote="mainlining" revision="14-new" />
 
   <!-- Proprietary Vendor trees -->
   <project name="cupid-development/proprietary_vendor_xiaomi_dagda" path="vendor/xiaomi/dagda" remote="mainlining" revision="lineage-21" />
