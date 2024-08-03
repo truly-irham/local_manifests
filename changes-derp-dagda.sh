@@ -38,3 +38,10 @@ cd ../../..
 cd vendor/derp
 git revert 6fab2c3
 cd ../..
+
+# Update lint-baseline.txt
+cd frameworks/base
+git remote | grep -q "^temp-repo$" || git remote add temp-repo https://github.com/truly-irham/frameworks_base_derpfest.git
+git fetch temp-repo
+git cherry-pick d07525c
+cd ../..
