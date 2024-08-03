@@ -33,3 +33,8 @@ curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh
 git add --all
 git commit -m "Build kernel with KernelSU from main branch"
 cd ../../..
+
+# Revert "kernel: Update default clang version to r510928"
+cd vendor/derp
+git revert 6fab2c3
+cd ../..
