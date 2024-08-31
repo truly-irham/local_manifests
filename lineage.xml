@@ -14,8 +14,8 @@
   <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="kernel/xiaomi/sm8450-devicetrees" remote="github" revision="lineage-21" />
 
   <!-- Miui Camera -->
-  <project name="truly-irham/android_device_xiaomi_miuicamera-zeus" path="device/xiaomi/miuicamera-zeus" remote="github" revision="lineage-21" />
-  <project name="anush02198/android_vendor_xiaomi_miuicamera-dagda" path="vendor/xiaomi/miuicamera-zeus" remote="mainlining" revision="14-new" />
+  <project name="cupid-development/android_device_xiaomi_miuicamera-cupid" path="device/xiaomi/miuicamera-cupid" remote="github" revision="lineage-21" />
+  <project name="cupid-development/proprietary_vendor_xiaomi_miuicamera-cupid" path="vendor/xiaomi/miuicamera-cupid" remote="mainlining" revision="lineage-21" />
 
   <!-- Proprietary Vendor trees -->
   <project name="cupid-development/proprietary_vendor_xiaomi_dagda" path="vendor/xiaomi/dagda" remote="mainlining" revision="lineage-21" />
