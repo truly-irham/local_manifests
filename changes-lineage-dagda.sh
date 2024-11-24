@@ -6,20 +6,21 @@ source "vendor/lineage/build/envsetup.sh";
 
 # Source: https://gitlab.com/cupid-development/automated-builds/-/raw/main/repopicks.sh
 
-# hardware/qcom-caf/sm8450/audio/primary-hal
+# vendor/lineage
 changes=(
-406470 # configs: Allow setsockopt syscall for qcom c2audio
-406471 # hal: Guard primary audio HAL in case target provides prebuilt
-406472 # hal: Move audio primary HAL guard
-406473 # hal: Depend on agmserver and palserver headers
+367044 # android: merge_dtbs: Respect miboard-id while merging
 )
-repopick -g https://review.lineageos.org -P hardware/qcom-caf/sm8450/audio/primary-hal ${changes[@]}&
+repopick -f -g https://review.lineageos.org -P vendor/lineage ${changes[@]}&
 
-# hardware/qcom-caf/sm8450/display
+# hardware/xiaomi
 changes=(
-397275 # gralloc: Allow devices to opt-in for YCrCb camera video encode
+405259 # fingerprint: Move UDFPS handler and extension out of HIDL
+404720 # aidl: fingerprint: Initial stub service
+404721 # aidl: fingerprint: Initial Xiaomi implementation
+408093 # aidl: fingerprint: Eat vendor acquired messages
+408771 # aidl: fingerprint: Allow setting more than one sensor location
 )
-repopick -g https://review.lineageos.org -P hardware/qcom-caf/sm8450/display ${changes[@]}&
+repopick -f -g https://review.lineageos.org -P hardware/xiaomi ${changes[@]}&
 
 wait
 
