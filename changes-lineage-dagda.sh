@@ -12,16 +12,6 @@ changes=(
 )
 repopick -f -g https://review.lineageos.org -P vendor/lineage ${changes[@]}&
 
-# hardware/xiaomi
-changes=(
-405259 # fingerprint: Move UDFPS handler and extension out of HIDL
-404720 # aidl: fingerprint: Initial stub service
-404721 # aidl: fingerprint: Initial Xiaomi implementation
-408093 # aidl: fingerprint: Eat vendor acquired messages
-408771 # aidl: fingerprint: Allow setting more than one sensor location
-)
-repopick -f -g https://review.lineageos.org -P hardware/xiaomi ${changes[@]}&
-
 wait
 
 # Build kernel with KernelSU from main branch
